@@ -1,0 +1,19 @@
+{
+  "name": "google-contacts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-packager . 'GoogleContacts' --platform=darwin --arch=x64",
+    "disthelp": "electron-packager --help"
+  },
+  "author": "Jens Schumacher",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^10.1.5",
+    "electron-builder": "^22.9.1",
+    "electron-packager": "^15.1.0"
+  }
+}
