@@ -1,25 +1,34 @@
 {
-  "name": "google-contacts",
-  "productName": "Google Kontakte",
-  "icon": "assets/app-icon.png",
+  "name": "info.maila.google.contacts",
   "version": "0.0.1",
-  "description": "",
-  "main": "main.js",
+  "description": "Google Contacts",
+  "productName": "Google Kontakte",
   "scripts": {
-    "start": "electron .",
-    "dist": "electron-packager . 'GoogleContacts' --platform=darwin --arch=x64",
-    "disthelp": "electron-packager --help"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "start": "npm run-script build && electron ./dist/main.js"
   },
-  "author": {
-    "name": "Jens Schumacher",
-    "email": "jeschu@ok.de",
-    "url": "https://github.com/jeschu"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeschu/google-contacts.git"
   },
+  "keywords": [
+    "Google",
+    "Contacts"
+  ],
+  "author": "Jens Schumacher <jeschu@ok.de> (https://github.com/jeschu)",
   "license": "ISC",
-  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/jeschu/google-contacts/issues"
+  },
+  "homepage": "https://github.com/jeschu/google-contacts#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
     "electron": "^10.1.5",
-    "electron-builder": "^22.9.1",
-    "electron-packager": "^15.1.0"
-  }
+    "eslint": "^7.13.0",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {}
 }
